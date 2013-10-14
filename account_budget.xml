@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="res.group" id="group_budget">
+            <field name="name">Account Budget</field>
+        </record>
+        <record model="res.group" id="group_budget_admin">
+            <field name="name">Account Budget Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_budget">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_budget"/>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_budget_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+
+        <record model="res.user-res.group" id="user_trigger_group_budget">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_budget"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_budget_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+        <!-- Permissions -->
+        <record model="ir.model.button" id="budget_valid_button">
+            <field name="name">valid</field>
+            <field name="model" search="[('model', '=', 'account.budget')]"/>
+        </record>
+        <record model="ir.model.button-res.group" id="budget_valid_button_group_budget_admin">
+            <field name="button" ref="budget_valid_button"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+        <record model="ir.model.button" id="budget_done_button">
+            <field name="name">done</field>
+            <field name="model" search="[('model', '=', 'account.budget')]"/>
+        </record>
+        <record model="ir.model.button-res.group" id="budget_done_button_group_budget_admin">
+            <field name="button" ref="budget_done_button"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+        <record model="ir.model.button" id="budget_draft_button">
+            <field name="name">draft</field>
+            <field name="model" search="[('model', '=', 'account.budget')]"/>
+        </record>
+        <record model="ir.model.button-res.group" id="budget_draft_button_group_budget_admin">
+            <field name="button" ref="budget_draft_button"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+        <record model="ir.model.access" id="access_budget_post">
+            <field name="model" search="[('model', '=', 'account.budget.position')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_budget_post_admin">
+            <field name="model" search="[('model', '=', 'account.budget.position')]"/>
+            <field name="group" ref="group_budget_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_budget">
+            <field name="model" search="[('model', '=', 'account.budget')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_budget_admin">
+            <field name="model" search="[('model', '=', 'account.budget')]"/>
+            <field name="group" ref="group_budget"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_budget_line">
+            <field name="model" search="[('model', '=', 'account.budget.line')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_budget_line_admin">
+            <field name="model" search="[('model', '=', 'account.budget.line')]"/>
+            <field name="group" ref="group_budget"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record id="act_budget_position_tree" model="ir.action.act_window">
+            <field name="name">Budgets Positions</field>
+            <field name="res_model">account.budget.position</field>
+        </record>
+
+        <record id="view_budget_post_tree" model="ir.ui.view">
+            <field name="model">account.budget.position</field>
+            <field name="type">tree</field>
+            <field name="name">budget_post_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_budget_post_form">
+            <field name="name">budget_post_form</field>
+            <field name="model">account.budget.position</field>
+            <field name="type">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="budget_view_form">
+            <field name="name">budget_form</field>
+            <field name="model">account.budget</field>
+            <field name="type">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="budget_view_tree">
+            <field name="name">budget_tree</field>
+            <field name="model">account.budget</field>
+            <field name="type">tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_budget_tree">
+            <field name="name">Budgets</field>
+            <field name="res_model">account.budget</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_budget_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="budget_view_tree"/>
+            <field name="act_window" ref="act_budget_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_budget_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="budget_view_form"/>
+            <field name="act_window" ref="act_budget_tree"/>
+        </record>
+
+        <record model="ir.ui.view" id="budget_line_view_tree">
+            <field name="name">budget_line_tree</field>
+            <field name="model">account.budget.line</field>
+            <field name="type">tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="budget_line_view_form">
+            <field name="name">budget_line_form</field>
+            <field name="model">account.budget.line</field>
+            <field name="type">form</field>
+        </record>
+
+        <record id="open_budget_post_form" model="ir.action.act_window">
+            <field name="name">Budgetary Positions</field>
+            <field name="res_model">account.budget.position</field>
+        </record>
+
+        <menuitem id="menu_budget_position" action="act_budget_position_tree"
+            parent="account.menu_account_configuration" sequence="60"
+            icon="tryton-list"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_budget_position_group_budget_admin">
+            <field name="menu" ref="menu_budget_position"/>
+            <field name="group" ref="group_budget_admin"/>
+        </record>
+
+        <menuitem id="menu_budgets" name="Budgets"
+            parent="account.menu_account" sequence="60"/>
+        <record model="ir.ui.menu-res.group"
+            id="menu_budgets_group_budget">
+            <field name="menu" ref="menu_budgets"/>
+            <field name="group" ref="group_budget"/>
+        </record>
+
+        <menuitem id="menu_budget_tree" action="act_budget_tree"
+            parent="menu_budgets"/>
+
+        <record id="print_budget_start_view_form" model="ir.ui.view">
+            <field name="model">account_budget.print_budget.start</field>
+            <field name="type">form</field>
+            <field name="name">print_budget_start</field>
+        </record>
+
+        <record model="ir.action.report" id="act_report_budget">
+            <field name="name">Budget</field>
+            <field name="model">account.budget.line</field>
+            <field name="report_name">account.budget.report</field>
+            <field name="report">account_budget/budget.jrxml</field>
+        </record>
+
+        <record model="ir.action.wizard" id="act_print_budget_report">
+            <field name="name">Print Budget</field>
+            <field name="wiz_name">account_budget.print_budget</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_budget_report_keyword1">
+            <field name="action" ref="act_print_budget_report"/>
+            <field name="keyword">form_action</field>
+            <field name="model">account.budget,-1</field>
+        </record>
+    </data>
+</tryton>

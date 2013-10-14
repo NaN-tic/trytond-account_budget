@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="budget" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2e6542d-192c-4c06-aba2-26e19b94d2f3">
+	<property name="ireport.zoom" value="1.7715610000000026"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.layers" value="##Tue Jun 25 17:11:49 CEST 2013\nlayer.0.name=Background\nlayer.0.visible=true\nlayer.0.id=0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="STANDARD_DIR" class="java.lang.String"/>
+	<parameter name="SUBTITLE" class="java.lang.String"/>
+	<parameter name="HEADER_DS" class="java.lang.Object"/>
+	<parameter name="COMMENT" class="java.lang.String"/>
+	<parameter name="budget" class="java.lang.String"/>
+	<parameter name="start_date" class="java.lang.String"/>
+	<parameter name="end_date" class="java.lang.String"/>
+	<parameter name="currency" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/dat./modules/account_budget/record]]>
+	</queryString>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[general_budget-general_budget/name-name]]></fieldDescription>
+	</field>
+	<field name="planned_amount" class="java.lang.Number">
+		<fieldDescription><![CDATA[planned_amount-planned_amount]]></fieldDescription>
+	</field>
+	<field name="practical_amount" class="java.lang.Number">
+		<fieldDescription><![CDATA[practical_amount-practical_amount]]></fieldDescription>
+	</field>
+	<field name="theoritical_amount" class="java.lang.Number">
+		<fieldDescription><![CDATA[theoritical_amount-theoritical_amount]]></fieldDescription>
+	</field>
+	<field name="percentage" class="java.lang.Number">
+		<fieldDescription><![CDATA[percentage-percentage]]></fieldDescription>
+	</field>
+	<variable name="L" class="java.util.Locale">
+		<variableExpression><![CDATA[$P{REPORT_LOCALE}]]></variableExpression>
+		<initialValueExpression><![CDATA[$P{REPORT_LOCALE}]]></initialValueExpression>
+	</variable>
+	<variable name="percentage" class="java.lang.Number" calculation="Average">
+		<variableExpression><![CDATA[$F{percentage}]]></variableExpression>
+	</variable>
+	<variable name="practical_amount" class="java.lang.Number" calculation="Sum">
+		<variableExpression><![CDATA[$F{practical_amount}]]></variableExpression>
+	</variable>
+	<variable name="planned_amount" class="java.lang.Number" calculation="Sum">
+		<variableExpression><![CDATA[$F{planned_amount}]]></variableExpression>
+	</variable>
+	<variable name="theoritical_amount" class="java.lang.Number" calculation="Sum">
+		<variableExpression><![CDATA[$F{theoritical_amount}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="76">
+			<textField>
+				<reportElement uuid="2924b266-8c5f-4a29-95ce-716893b1e31e" x="0" y="43" width="555" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Budget: ") + $P{budget} +" " + tr($V{L},"Start Date: ") + $P{start_date} +" " + tr($V{L},"End Date: ") + $P{end_date} +" " + tr($V{L},"Currency: ") + $P{currency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1c5d69f6-2c21-4835-a766-f7c5f5073beb" x="467" y="-1" width="88" height="15"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="86eed93e-d9c9-4cf3-9c73-337ab7e7764f" x="102" y="0" width="365" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Budget")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5324f0c9-7c03-4b4e-a498-40830a8a2b39" x="2" y="11" width="239" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d2f45331-65f9-4e93-9460-2d24bf13153b" x="404" y="11" width="83" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Practical Amount")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0597855d-37b3-4df8-8d6a-88a0d0570c4e" x="488" y="11" width="67" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Percentage(%)")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="08f207aa-6465-4a72-900c-44e7e786325d" x="324" y="11" width="83" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Planned Amount")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="97609307-fff7-4b37-8838-abc5c71e0342" x="241" y="11" width="83" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tr($V{L},"Theoretical Amount")]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1a9998f1-c0b1-4767-8433-9154d70083a3" x="2" y="0" width="239" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="5ce3a187-b5f2-425f-bf69-aa1eaf7f93cb" x="404" y="0" width="83" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{practical_amount} == null ? new Float(0.0) : $F{practical_amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="693288c6-e063-46fc-bcd0-a8d045687e77" x="488" y="0" width="67" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{percentage} == null ? new Float(0.0) : $F{percentage}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="2f9bffc7-9a72-4797-9ad9-90324bb174d6" x="324" y="0" width="83" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planned_amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="1926abd0-3b52-4cb5-8d4f-4aed0e803514" x="241" y="0" width="83" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{theoritical_amount} == null ? new Float(0.0) : $F{theoritical_amount} ]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11">
+			<textField evaluationTime="Report">
+				<reportElement uuid="0925b80d-bf95-4c3b-bba8-eb9a16969602" x="281" y="0" width="40" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="46a60c9b-8249-474a-ad1b-de670113b826" x="250" y="0" width="31" height="10"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" /"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20">
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="0e739f22-6a4f-4a10-baf7-fdfa6d4d711c" x="488" y="4" width="66" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{percentage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="53cd792b-92c5-46cf-ae02-5753da6c4f1a" x="161" y="4" width="86" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="a74ed9c4-df2d-4b38-80a1-7266b57d5da1" x="407" y="4" width="80" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{practical_amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="9a860c82-3efe-4a8d-b817-c389ef926a90" x="327" y="4" width="80" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{planned_amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="335ce469-6005-4621-ae5a-f645321e28f5" x="247" y="4" width="80" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{theoritical_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

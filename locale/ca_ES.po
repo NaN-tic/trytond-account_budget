@@ -1,0 +1,327 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:account.budget.line:"
+msgid "The General Budget \"%s\" has no accounts."
+msgstr "La posició pressupostaria \"%s\" no té comptes associats."
+
+msgctxt "field:account.budget,code:"
+msgid "Code"
+msgstr "Codi"
+
+msgctxt "field:account.budget,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:account.budget,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:account.budget,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:account.budget,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:account.budget,end_date:"
+msgid "End Date"
+msgstr "Data final"
+
+msgctxt "field:account.budget,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account.budget,lines:"
+msgid "Budget Lines"
+msgstr "Linies pressupost"
+
+msgctxt "field:account.budget,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account.budget,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account.budget,start_date:"
+msgid "Start Date"
+msgstr "Data inici"
+
+msgctxt "field:account.budget,state:"
+msgid "Status"
+msgstr "Estat"
+
+msgctxt "field:account.budget,validating_user:"
+msgid "Validate User"
+msgstr "Usuari validador"
+
+msgctxt "field:account.budget,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:account.budget,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:account.budget.line,budget:"
+msgid "Budget"
+msgstr "Pressupost"
+
+msgctxt "field:account.budget.line,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:account.budget.line,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:account.budget.line,currency_digits:"
+msgid "Currency Digits"
+msgstr "Decimals de la moneda"
+
+msgctxt "field:account.budget.line,end_date:"
+msgid "End Date"
+msgstr "Data final"
+
+msgctxt "field:account.budget.line,general_budget:"
+msgid "Budgetary Position"
+msgstr "Posició pressupostària"
+
+msgctxt "field:account.budget.line,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account.budget.line,paid_date:"
+msgid "Paid Date"
+msgstr "Data pagament"
+
+msgctxt "field:account.budget.line,percentage:"
+msgid "Percentage"
+msgstr "Percentatge"
+
+msgctxt "field:account.budget.line,planned_amount:"
+msgid "Planned Amount"
+msgstr "Import planejat"
+
+msgctxt "field:account.budget.line,practical_amount:"
+msgid "Practical Amount"
+msgstr "Import practicat"
+
+msgctxt "field:account.budget.line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account.budget.line,start_date:"
+msgid "Start Date"
+msgstr "Data inici"
+
+msgctxt "field:account.budget.line,theoritical_amount:"
+msgid "Theoretical Amount"
+msgstr "Import teòric"
+
+msgctxt "field:account.budget.line,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:account.budget.line,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:account.budget.position,accounts:"
+msgid "Accounts"
+msgstr "Comptes"
+
+msgctxt "field:account.budget.position,code:"
+msgid "Code"
+msgstr "Codi"
+
+msgctxt "field:account.budget.position,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:account.budget.position,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:account.budget.position,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:account.budget.position,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account.budget.position,lines:"
+msgid "Budget Lines"
+msgstr "Linies pressupost"
+
+msgctxt "field:account.budget.position,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account.budget.position,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account.budget.position,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:account.budget.position,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:account_budget.print_budget.start,end_date:"
+msgid "End Date"
+msgstr "Data final"
+
+msgctxt "field:account_budget.print_budget.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account_budget.print_budget.start,start_date:"
+msgid "Start Date"
+msgstr "Data inici"
+
+msgctxt "field:account_budget_post-account_account,account:"
+msgid "Account"
+msgstr "Compte"
+
+msgctxt "field:account_budget_post-account_account,budget:"
+msgid "Budgetary Postition"
+msgstr "Posició pressupostària"
+
+msgctxt "field:account_budget_post-account_account,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:account_budget_post-account_account,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:account_budget_post-account_account,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account_budget_post-account_account,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:account_budget_post-account_account,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:account_budget_post-account_account,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:account.budget,name:"
+msgid "Budget"
+msgstr "Pressupost"
+
+msgctxt "model:account.budget.line,name:"
+msgid "Budget Line"
+msgstr "Línia pressupost"
+
+msgctxt "model:account.budget.position,name:"
+msgid "Budgetary Position"
+msgstr "Posició pressupostària"
+
+msgctxt "model:account_budget.print_budget.start,name:"
+msgid "Print Budget Start"
+msgstr "Inici Imprimir Presupost"
+
+msgctxt "model:account_budget_post-account_account,name:"
+msgid "AccountBudget - Accounts"
+msgstr "Posicions Presupostaries - Pressupostos"
+
+msgctxt "model:ir.action,name:act_budget_position_tree"
+msgid "Budgets Positions"
+msgstr "Posicions pressupostaries"
+
+msgctxt "model:ir.action,name:act_budget_tree"
+msgid "Budgets"
+msgstr "Pressupostos"
+
+msgctxt "model:ir.action,name:act_print_budget_report"
+msgid "Print Budget"
+msgstr "Imprimir Presupost"
+
+msgctxt "model:ir.action,name:act_report_budget"
+msgid "Budget"
+msgstr "Pressupost"
+
+msgctxt "model:ir.action,name:open_budget_post_form"
+msgid "Budgetary Positions"
+msgstr "Posicions pressupostària"
+
+msgctxt "model:ir.action.act_window,name:act_budget_position_tree"
+msgid "Budgets Positions"
+msgstr "Posicions pressupostaries"
+
+msgctxt "model:ir.action.act_window,name:act_budget_tree"
+msgid "Budgets"
+msgstr "Pressupostos"
+
+msgctxt "model:ir.action.act_window,name:open_budget_post_form"
+msgid "Budgetary Positions"
+msgstr "Posicions pressupostària"
+
+msgctxt "model:ir.action.report,name:act_report_budget"
+msgid "Budget"
+msgstr "Pressupost"
+
+msgctxt "model:ir.action.wizard,name:act_print_budget_report"
+msgid "Print Budget"
+msgstr "Imprimir Presupost"
+
+msgctxt "model:ir.ui.menu,name:menu_budget_position"
+msgid "Budgets Positions"
+msgstr "Posicions pressupostaries"
+
+msgctxt "model:ir.ui.menu,name:menu_budget_tree"
+msgid "Budgets"
+msgstr "Pressupostos"
+
+msgctxt "model:ir.ui.menu,name:menu_budgets"
+msgid "Budgets"
+msgstr "Pressupostos"
+
+msgctxt "model:res.group,name:group_budget"
+msgid "Account Budget"
+msgstr "Pressupostos"
+
+msgctxt "model:res.group,name:group_budget_admin"
+msgid "Account Budget Administration"
+msgstr "Administració Pressupostos"
+
+msgctxt "selection:account.budget,state:"
+msgid "Cancelled"
+msgstr "Cancelat"
+
+msgctxt "selection:account.budget,state:"
+msgid "Confirmed"
+msgstr "Confirmat"
+
+msgctxt "selection:account.budget,state:"
+msgid "Done"
+msgstr "Realitzat"
+
+msgctxt "selection:account.budget,state:"
+msgid "Draft"
+msgstr "Esborrany"
+
+msgctxt "selection:account.budget,state:"
+msgid "Validated"
+msgstr "Validat"
+
+msgctxt "wizard_button:account_budget.print_budget,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:account_budget.print_budget,start,print_:"
+msgid "Print"
+msgstr "Imprimir"

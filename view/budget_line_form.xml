@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Budget Lines">
+    <label name="budget" />
+    <field name="budget" />
+    <label name="general_budget"/>
+    <field name="general_budget"/>
+    <label name="start_date"/>
+    <field name="start_date"/>
+    <label name="end_date"/>
+    <field name="end_date"/>
+    <label name="paid_date"/>
+    <field name="paid_date"/>
+    <label name="planned_amount"/>
+    <field name="planned_amount"/>
+</form>
+

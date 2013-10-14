@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Budgetary Position">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="company"/>
+    <field name="company"/>
+    <notebook colspan="4">
+        <page id="accounts" string="Accounts">
+            <field name="accounts" colspan="4"/>
+        </page>
+        <page id="lines" string="Budget Lines">
+            <field name="lines" colspan="4" />
+        </page>
+    </notebook>
+</form>

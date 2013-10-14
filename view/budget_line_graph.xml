@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<graph type="bar" string="Lines">
+    <field name="analytic_account" groups="analytic.group_analytic_accounting"/>
+    <field name="planned_amount" operator="+"/>
+    <field group="True" name="general_budget"/>
+</graph>

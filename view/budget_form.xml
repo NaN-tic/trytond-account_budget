@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Budget">
+        <label name="company"/>
+        <field name="company"/>
+        <label name="currency"/>
+        <field name="currency"/>
+        <label name="name"/>
+        <field name="name"/>
+        <label name="code"/>
+        <field name="code"/>
+        <label name="start_date"/>
+        <field name="start_date"/>
+        <label name="end_date"/>
+        <field name="end_date"/>
+        <label name="validating_user"/>
+        <field name="validating_user"/>
+        <field name="lines" colspan="4"/>
+        <label name="state"/>
+        <field name="state"/>
+        <group col="4" colspan="2" id="buttons">
+            <button string="Cancel" name="cancel" icon="tryton-cancel"/>
+            <button string="Confirm" name="confirm" icon="tryton-go-next"/>
+            <button string="Approve" name="valid" icon="tryton-ok"/>
+            <button string="Done" name="done" icon="tryton-go-next" />
+            <button name="draft" string="Reset to Draft" icon="tryton-clear"/>
+        </group>
+</form>
