@@ -180,8 +180,8 @@ class BudgetLine(ModelSQL, ModelView):
         ondelete='CASCADE', select=True, required=True)
     general_budget = fields.Many2One('account.budget.position',
         'Budgetary Position', required=True)
-    currency_digits = fields.Function(fields.Integer('Currency Digits',
-        on_change_with=['currency']), 'on_change_with_currency_digits')
+    currency_digits = fields.Function(fields.Integer('Currency Digits'),
+        'on_change_with_currency_digits')
     start_date = fields.Date('Start Date', required=True)
     end_date = fields.Date('End Date', required=True)
     paid_date = fields.Date('Paid Date')
@@ -203,6 +203,7 @@ class BudgetLine(ModelSQL, ModelView):
                 'no_accounts': ('The General Budget "%s" has no accounts.'),
                 })
 
+    @fields.depends('currency')
     def on_change_with_currency_digits(self, name=None):
         if self.budget and self.budget.currency:
             return self.budget.currency.digits
