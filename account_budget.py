@@ -1,3 +1,5 @@
+# The COPYRIGHT file at the top level of this repository contains the full
+# copyright notices and license terms.
 import datetime
 from decimal import Decimal
 
@@ -16,8 +18,7 @@ __all__ = ['BudgetAccounts', 'BudgetPosition', 'Budget', 'BudgetLine',
 
 _STATES = {
     'readonly': Eval('state') != 'draft',
-}
-
+    }
 _DEPENDS = ['state']
 
 
@@ -108,7 +109,8 @@ class Budget(Workflow, ModelSQL, ModelView):
                     'invisible': Eval('state') != 'cancel',
                     },
                 'cancel': {
-                    'invisible': ~Eval('state').in_(['validated', 'confirmed']),
+                    'invisible': ~Eval('state').in_(['validated',
+                            'confirmed']),
                     },
                 })
 
