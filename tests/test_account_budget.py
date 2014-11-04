@@ -7,23 +7,17 @@ from trytond.tests.test_tryton import test_view, test_depends
 
 
 class AccountBudgetTestCase(unittest.TestCase):
-    '''
-    Test Account Budget module.
-    '''
+    'Test Account Budget module'
 
     def setUp(self):
         trytond.tests.test_tryton.install_module('account_budget')
 
     def test0005views(self):
-        '''
-        Test views.
-        '''
+        'Test views'
         test_view('account_budget')
 
     def test0006depends(self):
-        '''
-        Test depends.
-        '''
+        'Test depends'
         test_depends()
 
 
