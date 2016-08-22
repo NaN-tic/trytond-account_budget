@@ -3,22 +3,12 @@
 # copyright notices and license terms.
 import unittest
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import test_view, test_depends
+from trytond.tests.test_tryton import ModuleTestCase
 
 
-class AccountBudgetTestCase(unittest.TestCase):
+class AccountBudgetTestCase(ModuleTestCase):
     'Test Account Budget module'
-
-    def setUp(self):
-        trytond.tests.test_tryton.install_module('account_budget')
-
-    def test0005views(self):
-        'Test views'
-        test_view('account_budget')
-
-    def test0006depends(self):
-        'Test depends'
-        test_depends()
+    module = 'account_budget'
 
 
 def suite():
