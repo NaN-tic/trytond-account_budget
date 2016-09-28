@@ -215,8 +215,9 @@ class BudgetLine(ModelSQL, ModelView):
         pool = Pool()
         Move = pool.get('account.move')
         Line = pool.get('account.move.line')
+
         transaction = Transaction()
-        cursor = transaction.cursor
+        cursor = transaction.connection.cursor()
         context = transaction.context
 
         line = Line.__table__()
